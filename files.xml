@@ -1,0 +1,15 @@
+<xml>
+	
+	<files id="native-toolkit-simplefilewatcher">
+		
+		<compilerflag value="-I${NATIVE_TOOLKIT_PATH}/simplefilewatcher/include" />
+		<compilerflag value="-DNDEBUG" unless="debug" />
+		
+		<file name="${NATIVE_TOOLKIT_PATH}/simplefilewatcher/source/FileWatcher.cpp" />
+		<file name="${NATIVE_TOOLKIT_PATH}/simplefilewatcher/source/FileWatcherLinux.cpp" if="linux" />
+		<file name="${NATIVE_TOOLKIT_PATH}/simplefilewatcher/source/FileWatcherOSX.cpp" if="mac" />
+		<file name="${NATIVE_TOOLKIT_PATH}/simplefilewatcher/source/FileWatcherWin32.cpp" if="windows" />
+		
+	</files>
+	
+</xml>
